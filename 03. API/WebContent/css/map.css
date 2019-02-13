@@ -1,0 +1,28 @@
+/* header.jsp's CSS */
+* {padding: 0px; margin: 0px;}
+hr {border: 2px solid lightgray;}
+.header, .header_wrap, .menu_wrap, .body_wrap {width: 100%;}
+.header_wrap {background-color: #fefefe;}
+.menu_wrap {border-top: 2px solid lightgray; border-bottom: 2px solid lightgray; background-image: linear-gradient(#fefefe, #ededed);}
+.header_main, .menu_main, .body_main {width: 1532px; margin: 0px auto;}
+.top {width: 80%; padding: 20px 0px; margin: 0px auto; text-align: center;}
+.top>a {display: block; width: 400px; margin: 0px auto; text-decoration: none; color: darkslategray; font-size: 50px; font-family: Times New Roman;}
+.top>a:hover {text-shadow: 4px 4px 5px #1e90ff;}
+.menu {width: 80%; margin: 0px auto; text-align: center;}
+.menu>ul {display: block; list-style: none; margin-left: -6px;}
+.menu>ul>li {display: inline-block; margin-right: -6px; padding: 10px 0px;}
+.menu>ul>li>a {text-decoration: none; color: darkslategray; font-size: 20px; padding: 10px 38px; }
+.menu>ul>li>a:hover {text-shadow: 3px 3px 5px #1e90ff;}
+
+.section {position: relative; width: 1532px; margin: 0px auto; background-color: #fefefe; overflow:hidden; }
+.search-bar {width: 100%; margin: 0px auto; background-color: #ededed;}
+.search-bar>div {width: 420px; height: 30px;}
+#keyword, #blogKeyword {position: absolute; width: 300px; height: 30px; margin-top: -0px; font-weight: 800;}
+.search-bar>input, #keyword+input, #blogKeyword+input {width: 120px; height: 34px; float: right; font-weight: 800;}
+.search-bar>input:hover, #keyword+input:hover, #blogKeyword+input:hover {border: none; background-color: #1e90ff; color: white;}
+#map {width: 100%; height: 600px; margin-left: 10px;}
+
+.sidebar_wrap {position: absolute; width: 10px; height: 100%; top: 34px; left: 0px; background-color: #ededed;}
+.sidebar {width: 0px; margin-right:10px; background-color: #1e90ff; color: white; overflow: scroll;}
+#placesList {overflow: scroll;}
+#placesList>li {list-style: disc;}
