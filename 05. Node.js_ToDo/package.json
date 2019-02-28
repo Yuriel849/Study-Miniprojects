@@ -1,0 +1,19 @@
+{
+  "name": "05.-node.js_todo",
+  "version": "1.0.0",
+  "description": "A little test app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(git://github.com/Yuriel849/Miniprojects.git)"
+  },
+  "author": "Yuriel849",
+  "license": "ISC"
+}
