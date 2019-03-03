@@ -1,8 +1,10 @@
-# Miniprojects
-A repository to collect all my miniprojects
+# Study Miniprojects
+A repository to collect all my miniprojects, utilizing online tutorials and guides
 <br/>
 
 ## Contents
-&nbsp;&nbsp;&nbsp;1. Create a Bulletin Board System
-&nbsp;&nbsp;&nbsp;2. Practice creating Entity-Relationship Diagrams
-&nbsp;&nbsp;&nbsp;3. Utilize APIs (Map API, Search API, etc.)
+#### Create a Bulletin Board System
+#### Create basic Entity-Relationship Diagrams
+#### Utilize APIs (Map API, Search API, etc.)
+#### Start studying Node.js and create a basic real-time chatting app
+#### Create a basic to-do list app with Node.js
