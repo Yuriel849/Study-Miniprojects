@@ -3,20 +3,20 @@ function example() {
     console.log("hello");
 }
 
-example(); -> actually calls the function
+example(); -> Where the function is actually called
  */
 
  // Node.js function expression
- var example = function(){ // anonymous function (no name) -> this is a function expression
+ var example = function(){ // Anonymous function (no name) -> This is a function expression
      console.log("good night");
  };
 
-// variable "example" is equal to the anonymous function
-// "example" is a variable that is equal to a function, that function is invoked by adding paranetheses
+// The variable "example" is equal to the anonymous function
+// "example" is a variable that is equal to a function, and that function is invoked by adding parantheses like below:
 example();
 
-// passing functions as parameters
-function callFunction(func) { // callFunction accepts another function as an argument
+// Passing functions as parameters
+function callFunction(func) { // callFunction() accepts another function as an argument
     func();
 }
 
