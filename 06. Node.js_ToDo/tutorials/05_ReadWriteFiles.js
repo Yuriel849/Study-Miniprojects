@@ -14,7 +14,10 @@ var fs = require('fs');
 
 // Asynchronous functions require a third parameter -> What callback to execute when done with the asynchronous function
 fs.readFile('toRead.txt', 'utf8', function(err, data) {
-                               // Callback's 1st parameter is err data (if there is an error), 2nd parameter is data retrieved from reading the file
+            // Callback's 1st parameter is err data (if there is an error),
+                // 2nd parameter is data retrieved from reading the file
+                           // (this data is in the buffer format! -> use toString() to change to a standard String)
+                                 // When reading a file, Node creates a file-sized memory space and uses that as a buffer
     console.log(data);
     fs.writeFileSync('writeTo.txt', data);
 });
