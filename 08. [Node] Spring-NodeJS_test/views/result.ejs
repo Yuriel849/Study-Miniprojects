@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Receiving POST in Node.js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>
+        Hurray! The POST request has been succesfully received!
+    </h1>
+
+    <ul>
+        <% for(var i = 0; i < data.length; i++) { %>
+            <li><%= data[i].item %></li>
+        <% } %>
+    </ul>
+</body>
+</html>
