@@ -6,7 +6,7 @@ A repository to collect all my miniprojects, in some cases utilizing online tuto
 #### Create a Bulletin Board System
 #### Create basic Entity-Relationship Diagrams
 #### Utilize APIs
-> Daum Map API + Naver Search API + Korea Weather API
+> Daum Map API + Naver Search API + Korea Weather API <br>
 > Youtube APIs (IFrame player, Live streaming)
 #### Start studying Node.js
 > Create a basic real-time chatting app with Node.js <br>
