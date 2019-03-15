@@ -7,7 +7,7 @@ A repository to collect all my miniprojects, in some cases utilizing online tuto
 #### Create basic Entity-Relationship Diagrams
 #### Utilize APIs
 > Daum Map API + Naver Search API + Korea Weather API <br>
-> Youtube APIs (IFrame player, Live streaming)
+> Youtube APIs (IFrame player, Live Streaming)
 #### Start studying Node.js
 > Basics of Node.js <br>
 > Create a basic real-time chatting app with Node.js <br>
