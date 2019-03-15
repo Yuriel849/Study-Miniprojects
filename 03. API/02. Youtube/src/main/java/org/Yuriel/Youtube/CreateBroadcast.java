@@ -45,8 +45,7 @@ public class CreateBroadcast {
      */
     public static void main(String[] args) {
 
-        // This OAuth 2.0 access scope allows for full read/write access to the
-        // authenticated user's account.
+        // This OAuth 2.0 access scope allows for full read/write access to the authenticated user's account.
         List<String> scopes = Lists.newArrayList("https://www.googleapis.com/auth/youtube");
 
         try {
@@ -61,15 +60,14 @@ public class CreateBroadcast {
             String title = getBroadcastTitle();
             System.out.println("You chose " + title + " for broadcast title.");
 
-            // Create a snippet with the title and scheduled start and end
-            // times for the broadcast. Currently, those times are hard-coded.
+            // Create a snippet with the title and scheduled start and end times for the broadcast. (Currently, those times are hard-coded)
             LiveBroadcastSnippet broadcastSnippet = new LiveBroadcastSnippet();
             broadcastSnippet.setTitle(title);
-            broadcastSnippet.setScheduledStartTime(new DateTime("2024-01-30T00:00:00.000Z"));
-            broadcastSnippet.setScheduledEndTime(new DateTime("2024-01-31T00:00:00.000Z"));
+            broadcastSnippet.setScheduledStartTime(new DateTime("2019-03-30T00:00:00.000Z"));
+            broadcastSnippet.setScheduledEndTime(new DateTime("2019-03-31T00:00:00.000Z"));
 
-            // Set the broadcast's privacy status to "private". See:
-            // https://developers.google.com/youtube/v3/live/docs/liveBroadcasts#status.privacyStatus
+            // Set the broadcast's privacy status to "private".
+            	// See: https://developers.google.com/youtube/v3/live/docs/liveBroadcasts#status.privacyStatus
             LiveBroadcastStatus status = new LiveBroadcastStatus();
             status.setPrivacyStatus("private");
 
@@ -89,10 +87,8 @@ public class CreateBroadcast {
             System.out.println("  - Title: " + returnedBroadcast.getSnippet().getTitle());
             System.out.println("  - Description: " + returnedBroadcast.getSnippet().getDescription());
             System.out.println("  - Published At: " + returnedBroadcast.getSnippet().getPublishedAt());
-            System.out.println(
-                    "  - Scheduled Start Time: " + returnedBroadcast.getSnippet().getScheduledStartTime());
-            System.out.println(
-                    "  - Scheduled End Time: " + returnedBroadcast.getSnippet().getScheduledEndTime());
+            System.out.println("  - Scheduled Start Time: " + returnedBroadcast.getSnippet().getScheduledStartTime());
+            System.out.println("  - Scheduled End Time: " + returnedBroadcast.getSnippet().getScheduledEndTime());
 
             // Prompt the user to enter a title for the video stream.
             title = getStreamTitle();
@@ -102,10 +98,9 @@ public class CreateBroadcast {
             LiveStreamSnippet streamSnippet = new LiveStreamSnippet();
             streamSnippet.setTitle(title);
 
-            // Define the content distribution network settings for the
-            // video stream. The settings specify the stream's format and
-            // ingestion type. See:
-            // https://developers.google.com/youtube/v3/live/docs/liveStreams#cdn
+            // Define the content distribution network settings for the video stream.
+            // The settings specify the stream's format and ingestion type.
+            	// See: https://developers.google.com/youtube/v3/live/docs/liveStreams#cdn
             CdnSettings cdnSettings = new CdnSettings();
             cdnSettings.setFormat("1080p");
             cdnSettings.setIngestionType("rtmp");
@@ -116,7 +111,7 @@ public class CreateBroadcast {
             stream.setCdn(cdnSettings);
 
             // Construct and execute the API request to insert the stream.
-            YouTube.LiveStreams.Insert liveStreamInsert =
+            YouTube.LiveStreams.Insert liveStreamInsert = 
                     youtube.liveStreams().insert("snippet,cdn", stream);
             LiveStream returnedStream = liveStreamInsert.execute();
 
@@ -127,8 +122,7 @@ public class CreateBroadcast {
             System.out.println("  - Description: " + returnedStream.getSnippet().getDescription());
             System.out.println("  - Published At: " + returnedStream.getSnippet().getPublishedAt());
 
-            // Construct and execute a request to bind the new broadcast
-            // and stream.
+            // Construct and execute a request to bind the new broadcast and stream.
             YouTube.LiveBroadcasts.Bind liveBroadcastBind =
                     youtube.liveBroadcasts().bind(returnedBroadcast.getId(), "id,contentDetails");
             liveBroadcastBind.setStreamId(returnedStream.getId());
@@ -137,14 +131,11 @@ public class CreateBroadcast {
             // Print information from the API response.
             System.out.println("\n================== Returned Bound Broadcast ==================\n");
             System.out.println("  - Broadcast Id: " + returnedBroadcast.getId());
-            System.out.println(
-                    "  - Bound Stream Id: " + returnedBroadcast.getContentDetails().getBoundStreamId());
+            System.out.println("  - Bound Stream Id: " + returnedBroadcast.getContentDetails().getBoundStreamId());
 
         } catch (GoogleJsonResponseException e) {
-            System.err.println("GoogleJsonResponseException code: " + e.getDetails().getCode() + " : "
-                    + e.getDetails().getMessage());
+            System.err.println("GoogleJsonResponseException code: " + e.getDetails().getCode() + " : " + e.getDetails().getMessage());
             e.printStackTrace();
-
         } catch (IOException e) {
             System.err.println("IOException: " + e.getMessage());
             e.printStackTrace();

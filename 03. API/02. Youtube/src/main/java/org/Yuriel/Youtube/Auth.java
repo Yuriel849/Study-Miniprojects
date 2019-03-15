@@ -50,10 +50,10 @@ public class Auth {
         // Load client secrets.
         Reader clientSecretReader = new InputStreamReader(Auth.class.getResourceAsStream("/client_secrets.json"));
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, clientSecretReader);
-
-        // Checks that the defaults have been replaced (Default = "Enter X here").
-        if (clientSecrets.getDetails().getClientId().startsWith("Enter")
-                || clientSecrets.getDetails().getClientSecret().startsWith("Enter ")) {
+        
+        // Checks that the defaults have been replaced (Default = "YOUR_*_HERE").
+        if (clientSecrets.getDetails().getClientId().startsWith("YOUR")
+                || clientSecrets.getDetails().getClientSecret().startsWith("YOUR")) {
             System.out.println(
                     "Enter Client ID and Secret from https://console.developers.google.com/project/_/apiui/credential "
                             + "into src/main/resources/client_secrets.json");
@@ -68,8 +68,8 @@ public class Auth {
                 HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, scopes).setCredentialDataStore(datastore)
                 .build();
 
-        // Build the local server and bind it to port 8080
-        LocalServerReceiver localReceiver = new LocalServerReceiver.Builder().setPort(8080).build();
+        // Build the local server and bind it to port 20001 (DO NOT CHANGE WITHOUT ALSO CHANGING ACCEPTED REDIRECT URIS @ YOUTUBE)
+        LocalServerReceiver localReceiver = new LocalServerReceiver.Builder().setPort(20001).build();
 
         // Authorize.
         return new AuthorizationCodeInstalledApp(flow, localReceiver).authorize("user");
