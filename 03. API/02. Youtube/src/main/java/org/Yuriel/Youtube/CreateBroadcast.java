@@ -27,16 +27,15 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 /**
- * Use the YouTube Live Streaming API to insert a broadcast and a stream
- * and then bind them together. Use OAuth 2.0 to authorize the API requests.
+ * Use the YouTube Live Streaming API to insert a broadcast and a stream and then bind them together.
+ * Use OAuth 2.0 to authorize the API requests.
  *
  * @author Ibrahim Ulukaya
  */
 public class CreateBroadcast {
 
     /**
-     * Define a global instance of a Youtube object, which will be used
-     * to make YouTube Data API requests.
+     * Define a global instance of a Youtube object, which will be used to make YouTube Data API requests.
      */
     private static YouTube youtube;
 
@@ -53,8 +52,7 @@ public class CreateBroadcast {
             Credential credential = Auth.authorize(scopes, "createbroadcast");
 
             // This object is used to make YouTube Data API requests.
-            youtube = new YouTube.Builder(Auth.HTTP_TRANSPORT, Auth.JSON_FACTORY, credential)
-                    .setApplicationName("youtube-cmdline-createbroadcast-sample").build();
+            youtube = new YouTube.Builder(Auth.HTTP_TRANSPORT, Auth.JSON_FACTORY, credential).build();
 
             // Prompt the user to enter a title for the broadcast.
             String title = getBroadcastTitle();
@@ -63,8 +61,8 @@ public class CreateBroadcast {
             // Create a snippet with the title and scheduled start and end times for the broadcast. (Currently, those times are hard-coded)
             LiveBroadcastSnippet broadcastSnippet = new LiveBroadcastSnippet();
             broadcastSnippet.setTitle(title);
-            broadcastSnippet.setScheduledStartTime(new DateTime("2019-03-30T00:00:00.000Z"));
-            broadcastSnippet.setScheduledEndTime(new DateTime("2019-03-31T00:00:00.000Z"));
+            broadcastSnippet.setScheduledStartTime(new DateTime("2019-03-15T07:40:00.000Z"));
+            broadcastSnippet.setScheduledEndTime(new DateTime("2019-03-25T00:00:00.000Z"));
 
             // Set the broadcast's privacy status to "private".
             	// See: https://developers.google.com/youtube/v3/live/docs/liveBroadcasts#status.privacyStatus

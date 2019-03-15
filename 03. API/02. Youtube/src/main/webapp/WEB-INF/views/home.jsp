@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <!DOCTYPE html>
@@ -10,8 +9,8 @@
 	</h1>  
     
     <!-- Test : Live streaming iframe player with channelID -->
-    <iframe id="player" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    	title="YouTube video player" src="https://www.youtube.com/embed/live_stream?channel=UC13SnYX0UKiVsbZLSW6IBzg&amp;enablejsapi=1&amp;"
-    	width="640" height="390" frameborder="0"></iframe>
+    <iframe id="player" width="1080" height="600" src="https://www.youtube.com/embed/3OCzoZU3BWo?autoplay=1&livemonitor=1"
+    	frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    	allowfullscreen></iframe>
 </body>
 </html>
