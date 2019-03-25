@@ -5,6 +5,8 @@ A repository to collect all my miniprojects, in some cases utilizing online tuto
 ## Contents
 #### Create a Bulletin Board System
 #### Create basic Entity-Relationship Diagrams
+> Automobile ERD (carmakers, car users) <br>
+> Film ERD (filmmakers, theaters, audience)
 #### Utilize APIs
 > Daum Map API + Naver Search API + Korea Weather API <br>
 > Youtube APIs (IFrame player, Live Streaming) (to be continued)
