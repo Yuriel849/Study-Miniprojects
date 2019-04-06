@@ -9,7 +9,7 @@ A repository to collect all my miniprojects, in some cases utilizing online tuto
 > Film ERD (filmmakers, theaters, audience)
 #### Utilize APIs
 > Daum Map API + Naver Search API + Korea Weather API <br>
-> YouTube APIs (iFrame player, Live Streaming)
+> YouTube APIs (iFrame player, Live Streaming) <br>
 >> YouTube's iFrame player used for project02-cloud-kitchen
 #### Start studying Node.js
 > Basics of Node.js <br>
