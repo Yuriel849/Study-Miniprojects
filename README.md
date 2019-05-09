@@ -1,10 +1,10 @@
 # Study Miniprojects
-A repository to collect all my miniprojects, in some cases utilizing online tutorials and guides
+A repository to collect all my miniprojects during study, in some cases utilizing online tutorials and guides
 <br/>
 
 ## Contents
 #### Create a Bulletin Board System
-#### Create basic Entity-Relationship Diagrams
+#### Basic Entity-Relationship Diagrams
 > Automobile ERD (carmakers, car users) <br>
 > Film ERD (filmmakers, theaters, audience)
 #### Utilize APIs
