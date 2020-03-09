@@ -24,14 +24,14 @@ public class SearchPattern {
 			if(UltrasonicDetection.forwardDetect()) {
 				goStop(right, left);
 				right.rotate(60);
+				goForward(right, left); // Restart after stopping and turning 60 degrees counterclockwise
 			}
 			
 			// After two minutes have passed, find and follow the green line
 			if(timer) {
 				break;
 			}
-		}
-		
+		}		
 		
 		goStop(right, left);
 		
